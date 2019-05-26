@@ -1,0 +1,63 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/steps.css">
+
+<form id="regForm" action="" class="p-5 bg-white">
+
+  <div class="tab">
+    <h4>What service do you need?</h4>
+    <div id='serviceitems'>
+
+    </div>
+  </div>
+   <div class="tab">
+    <h4>What work do we need to do?</h4>
+    <div id='workitems'>
+
+    </div>
+  </div>
+  <div class="tab">
+    <div class="row"> 
+    <h4>Please provide the specifics: </h4>
+    <textarea class="form-control" name="specifics"></textarea>
+  </div>
+  </div>
+  <div class="tab">
+    <h1>Schedule: </h1>
+    <small>Note*</small>
+    <small><ul>
+      <li>Date must not be less than today's date.</li>
+      <li>Appointments can only be done 1 week in advance.</li>
+      <li>Start time can only be set 1 hour from now so that the service provider can prepare.</li>
+      <li>End Time must not be less than an hour from the start time.</li>
+      <li>Operation hours is from 8:00 am to 6:00 pm.</li>
+    </ul></small>
+    <div class="row">
+      <div class="form-group col">
+        <label class="font-weight-bold" for="fullname">Preffered Date</label>
+        <input novalidate name="date" min="" id="date" type="date" class="form-control">
+      </div>
+      <div class="form-group col">
+        <label class="font-weight-bold" for="email">Start Time</label>
+        <input novalidate name="from" id="from" max="17:00" type="time" class="form-control">
+      </div>
+      <div class="form-group col">
+        <label class="font-weight-bold" for="email">End Time</label>
+        <input novalidate name="to" id="to" max="18:00" type="time" class="form-control">
+      </div>
+    </div>
+  </div>
+ 
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button  class="btn btn-primary" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button class="btn btn-primary" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div id="steps" style="text-align:center;margin-top:50px;">
+    <span class="step active"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+
+</form> 
